@@ -119,6 +119,8 @@ class Chat extends Model
                 else{
                     $logs[$key]['name'] = '';
                 }
+                $logs[$key]['read_flag'] = 2;
+
             }
 
             return ['code' => 0, 'data' => $logs, 'msg' => intval($param['page']), 'total' => ceil($total / $limit)];
@@ -159,6 +161,7 @@ class Chat extends Model
                 if(strpos($vo['from_id'], 'KF_') !== false || $vo['from_id'] == '0') {
                     $logs[$key]['type'] = 'mine';
                 }
+                $logs[$key]['read_flag'] = 2;
             }
 
             return ['code' => 0, 'data' => $logs, 'msg' => intval($param['page']), 'total' => ceil($total / $limit)];
