@@ -191,7 +191,7 @@
             ,'<div class="chat-avatars">'
             ,'<img src="' + data.avatar + '">'
             ,'</div>'
-            ,'<span>'+customer_id+'</span>'
+            ,'<div>'+customer_id+'</div>'
             ,'</div>'
             ,readFlag
             ,'</div>'
